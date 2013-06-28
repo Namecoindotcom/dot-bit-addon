@@ -1,0 +1,3 @@
+content	dotbit chrome/content/
+skin	dotbit	classic	chrome/skin/
+overlay chrome://browser/content/browser.xul	chrome://dotbit/content/dotbit.xul   

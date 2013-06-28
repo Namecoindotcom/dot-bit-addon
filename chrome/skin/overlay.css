@@ -1,0 +1,10 @@
+#dotbitStatusBarIcon[value='active']
+{
+	list-style-image: url('chrome://dotbit/skin/images/status-bar-icon-active.png');
+}
+
+#dotbitStatusBarIcon[value='inactive']
+{
+	list-style-image: url('chrome://dotbit/skin/images/status-bar-icon-inactive.png');
+}
+

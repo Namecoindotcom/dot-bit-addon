@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://dotbit/skin/overlay.css" type="text/css"?>
+<overlay id="dotbit"
+		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script src="chrome://dotbit/content/dotbit1.js" />
+	<statusbar id="status-bar">
+		<statusbarpanel id="dotbitPanel">
+			<image id="dotbitStatusBarIcon" />
+		</statusbarpanel>
+	</statusbar>
+</overlay>
