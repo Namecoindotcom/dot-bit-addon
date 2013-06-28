@@ -3,4 +3,6 @@ dot-bit-addon
 
 This is bit domain proxy addon for firefox!!
 
-Replace the text "<YOUR PAC FILE URL>" with your pac file url.
+Just Replace the text "YOUR PAC FILE URL" in "dotbit1.js" file with your pac file url and you are done.
+
+Thank you
