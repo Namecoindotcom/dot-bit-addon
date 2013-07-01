@@ -45,8 +45,8 @@ var dotbit =
             var newStatus = 'inactive';
             var prefManager = Components.classes["@mozilla.org/preferences-service;1"]
                                .getService(Components.interfaces.nsIPrefBranch);
-                                 prefManager.setIntPref("network.proxy.type",0);
-
+          	prefManager.setIntPref("network.proxy.type",prefManager.getIntPref("network.oldProxy.type"));
+		prefManager.setCharPref("network.proxy.autoconfig_url",prefManager.getCharPref("network.oldProxy.autoconfig_url"));
           alert("your proxy setting have been saved successfully");
          
         }
@@ -55,7 +55,13 @@ var dotbit =
           
             var prefManager = Components.classes["@mozilla.org/preferences-service;1"]
                                 .getService(Components.interfaces.nsIPrefBranch);
-            prefManager.setIntPref("network.proxy.type",2);
+	 if(prefManager.getCharPref("network.proxy.autoconfig_url")!="<YOUR PAC FILE URL>")
+	  {
+  prefManager.setCharPref("network.oldProxy.autoconfig_url",prefManager.getCharPref("network.proxy.autoconfig_url"));	
+	  prefManager.setIntPref("network.oldProxy.type",prefManager.getIntPref("network.proxy.type"));
+  	   
+	  }
+ prefManager.setIntPref("network.proxy.type",2);
 
             //setting pac file url 
             prefManager.setCharPref("network.proxy.autoconfig_url","<YOUR PAC FILE URL>");
