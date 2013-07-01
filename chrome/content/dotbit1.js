@@ -1,3 +1,5 @@
+ var oldProxy='';
+
 var dotbit =
 {
     'statusBarIcon': null,
